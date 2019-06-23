@@ -1,3 +1,4 @@
+#!/usr/bin/env python
 from flask import Flask, render_template, request
 from werkzeug import secure_filename
 import os
