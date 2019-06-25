@@ -1,3 +1,5 @@
+**Fork of https://github.com/ricktorzynski/ocr-tesseract-docker. Converted to CentOS with other customizatoons**
+
 # OCR Tesseract Docker
 Allows upload of an image for OCR using Tesseract and deployed using Docker.  This uses Flask, a light weight web server framework - but for development purposes only.  OpenCV is used to reduce noise in the image for better processing by pytesseract.  Uploads on AWS are limited to 2MB - below are 3 images of a job posting taken on a Pixel 2XL phone, and reduced in size using Gimp by adjusting quality. 
 
