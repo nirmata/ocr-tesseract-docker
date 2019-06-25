@@ -9,8 +9,8 @@ RUN yum install deltarpm -y &&\
     yum -y install poppler-utils && \
     yum clean all
 
-COPY . /app
 WORKDIR /app
+COPY requirements.txt /app 
 
 RUN pip install --upgrade pip &&\
     pip install -U setuptools &&\
@@ -19,6 +19,10 @@ RUN pip install --upgrade pip &&\
     pip install opencv-contrib-python &&\
     pip install -r requirements.txt &&\
     rm -rf ~/.cache/pip
+
+COPY  app.py static templates /app/
+COPY  static /app/static
+COPY  templates /app/templates
 
 ENTRYPOINT ["python"]
 CMD ["app.py"]
